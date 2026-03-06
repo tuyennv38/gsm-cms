@@ -11,10 +11,10 @@
 
 | # | Task ID | Implements | Mô tả | Ước lượng | Status | Ghi chú |
 |---|---------|------------|--------|-----------|--------|---------|
-| 1 | `task:setup-project-0001` | `prd:tech-stack-0002` | Khởi tạo dự án Next.js + Tailwind CSS + Zod/React Hook Form | 2h | 🔄 In Progress | |
-| 2 | `task:build-login-ui-0002` | `feature:login-form-0001` | Dựng layout/form login với các atom components (Input, Button) | 4h | ⬜ To Do | |
-| 3 | `task:add-validation-0003` | `feature:form-validation-0002` | Thêm validation Zod logic + thông báo lỗi tiếng Việt | 3h | ⬜ To Do | |
-| 4 | `task:test-responsive-0004` | `feature:login-form-0001` | Kiểm tra giao diện và fix lỗi hiển thị trên Mobile/Desktop | 2h | ⬜ To Do | |
+| 1 | `task:setup-project-0001` | `prd:tech-stack-0002` | Khởi tạo dự án Next.js + Tailwind CSS + Zod/React Hook Form | 2h | ✅ Done | commit:login-init-0003 |
+| 2 | `task:build-login-ui-0002` | `feature:login-form-0001` | Dựng layout/form login với các atom components (Input, Button) | 4h | ✅ Done | commit:login-init-0003 |
+| 3 | `task:add-validation-0003` | `feature:form-validation-0002` | Thêm validation Zod logic + thông báo lỗi tiếng Việt | 3h | ✅ Done | commit:login-init-0003 |
+| 4 | `task:test-responsive-0004` | `feature:login-form-0001` | Kiểm tra giao diện và fix lỗi hiển thị trên Mobile/Desktop | 2h | ✅ Done | commit:login-init-0003 |
 
 ## Definition of Done (DoD)
 - [ ] Code tuân thủ kiến trúc trong `system-design.md`.

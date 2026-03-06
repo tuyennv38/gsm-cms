@@ -1,1 +1,10 @@
+node_modules
+.next
+out
+build
+dist
 .vercel
+.env*
+*.log
+.DS_Store
+Thumbs.db
