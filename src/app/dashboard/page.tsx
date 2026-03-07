@@ -2,6 +2,7 @@
  * @implements task:setup-dashboard-layout-0006
  */
 import React from "react";
+import RevenueChart from "@/components/charts/RevenueChart";
 
 export default function DashboardPage() {
     return (
@@ -34,11 +35,8 @@ export default function DashboardPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-2 bg-white p-6 rounded-xl shadow-sm border border-gray-100 min-h-[400px] flex flex-col">
                     <h3 className="text-lg font-bold text-gray-800 mb-6">Biểu đồ Doanh thu (7 ngày gần nhất)</h3>
-                    <div className="flex-1 bg-gray-50 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-200">
-                        <div className="text-center">
-                            <p className="text-gray-400 font-medium">Bản đồ doanh thu sẽ hiển thị ở đây</p>
-                            <p className="text-xs text-gray-400 mt-1 italic">(Sử dụng Recharts trong Task tiếp theo)</p>
-                        </div>
+                    <div className="flex-1">
+                        <RevenueChart />
                     </div>
                 </div>
 
