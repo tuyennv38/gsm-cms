@@ -14,9 +14,9 @@ Xây dựng trang đăng nhập Next.js (Frontend Mockup) đúng phong cách thi
 ## 📋 Sprint Backlog
 | # | Task ID | Implements | Mô tả | Ước lượng | Status | Ghi chú |
 |---|---------|------------|--------|-----------|--------|---------|
-| 1 | `task:setup-project-0001` | `prd:tech-stack-0002` | Khởi tạo dự án Next.js + Tailwind CSS, cấu hình thư mục chuẩn. | 2h | 🔄 In Progress | |
-| 2 | `task:build-login-ui-0002` | `feature:login-form-0001` | Dựng layout và form đăng nhập (EmailInput, PasswordInput, SubmitButton). | 4h | ⬜ To Do | |
-| 3 | `task:add-validation-0003` | `feature:form-validation-0002` | Thêm logic validation (không trống, email format, min-length 6) + hiển thị thông báo. | 3h | ⬜ To Do | |
+| 1 | `task:setup-project-0001` | `prd:tech-stack-0002` | Khởi tạo dự án Next.js + Tailwind CSS, cấu hình thư mục chuẩn. | 2h | ✅ Done | commit:init-project-0001 |
+| 2 | `task:build-login-ui-0002` | `feature:login-form-0001` | Dựng layout và form đăng nhập (EmailInput, PasswordInput, SubmitButton). | 4h | ✅ Done | commit:login-ui-0001 |
+| 3 | `task:add-validation-0003` | `feature:form-validation-0002` | Thêm logic validation (không trống, email format, min-length 6) + hiển thị thông báo. | 3h | 🔄 In Progress | |
 | 4 | `task:test-responsive-0004` | `feature:login-form-0001` | Kiểm tra giao diện trên Mobile và Desktop (Responsive Check). | 2h | ⬜ To Do | |
 
 ---
