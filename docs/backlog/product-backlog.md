@@ -16,7 +16,7 @@
   - [ ] AC5: Toàn bộ thành phần UI tuân theo thiết kế Tailwind CSS.
 - **Priority:** Critical
 - **Story Points:** 3
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done (Sprint 1)
 
 ### PBI: Form Validation
 - **ID:** `feature:form-validation-0002`
@@ -30,4 +30,4 @@
   - [ ] AC5: Thông báo lỗi màu đỏ ngay dưới ô nhập.
 - **Priority:** High
 - **Story Points:** 2
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done (Sprint 1)
