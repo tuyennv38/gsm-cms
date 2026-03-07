@@ -379,6 +379,24 @@ Với mỗi feature trong Sprint, tạo test cases:
    ```
 2. Cập nhật CHANGELOG.md (nếu có).
 3. Cập nhật Product Backlog: đánh dấu các PBI đã release.
+
+### Bước 3.4: Sprint Closing & Merge (Hợp nhất nhánh chính)
+> **Khi kết thúc và hoàn thành một Sprint, DEV/Lead thực hiện merge toàn bộ code từ feature branch vào nhánh chính (master/main).**
+1. Đảm bảo tất cả các task trong Sprint đã ở trạng thái `✅ Done`.
+2. Chuyển sang nhánh chính:
+   ```bash
+   git checkout master
+   ```
+3. Hợp nhất (Merge) các nhánh feature đã hoàn thành:
+   ```bash
+   git merge feature/task-{id}_{description}
+   ```
+4. Giải quyết xung đột (nếu có), chạy lại `npm run build` để kiểm tra lần cuối.
+5. Đẩy (Push) lên nhánh chính trên Remote:
+   ```bash
+   git push origin master
+   ```
+
 ---
 ## Áp dụng cho PRD hiện tại: Login Page
 Dựa trên `docs/PRDs/PRD.md` hiện có, đây là kế hoạch cụ thể:
