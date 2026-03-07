@@ -1,10 +1,11 @@
 /**
- * @implements task:add-validation-0003
- * @implements feature:form-validation-0002
+ * @implements task:handle-login-redirect-0009
+ * @implements feature:dashboard-navigation-0003
  */
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 interface FormErrors {
     email?: string;
@@ -12,9 +13,11 @@ interface FormErrors {
 }
 
 export default function LoginForm() {
+    const router = useRouter();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState<FormErrors>({});
+    const [isLoading, setIsLoading] = useState(false);
 
     const validate = (): boolean => {
         const newErrors: FormErrors = {};
@@ -40,11 +43,17 @@ export default function LoginForm() {
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (validate()) {
+            setIsLoading(true);
             console.log("Validation success:", { email, password });
-            alert("Đăng nhập thành công (Mockup)");
+
+            // Giả lập thời gian xử lý đăng nhập
+            setTimeout(() => {
+                setIsLoading(false);
+                router.push("/dashboard");
+            }, 1000);
         }
     };
 
@@ -63,11 +72,12 @@ export default function LoginForm() {
                         id="email"
                         name="email"
                         type="email"
+                        disabled={isLoading}
                         placeholder="Nhập email của bạn"
                         className={`w-full px-4 py-2 border rounded-md focus:ring-2 outline-none transition-all ${errors.email
                                 ? "border-red-500 focus:ring-red-200"
                                 : "border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                            }`}
+                            } ${isLoading ? "bg-gray-50 opacity-70" : ""}`}
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
@@ -86,11 +96,12 @@ export default function LoginForm() {
                         id="password"
                         name="password"
                         type="password"
+                        disabled={isLoading}
                         placeholder="Nhập mật khẩu"
                         className={`w-full px-4 py-2 border rounded-md focus:ring-2 outline-none transition-all ${errors.password
                                 ? "border-red-500 focus:ring-red-200"
                                 : "border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                            }`}
+                            } ${isLoading ? "bg-gray-50 opacity-70" : ""}`}
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
@@ -100,9 +111,18 @@ export default function LoginForm() {
                 </div>
                 <button
                     type="submit"
-                    className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md shadow-sm transition-colors duration-200 focus:ring-2 focus:ring-blue-300 outline-none"
+                    disabled={isLoading}
+                    className={`w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md shadow-sm transition-colors duration-200 focus:ring-2 focus:ring-blue-300 outline-none flex items-center justify-center gap-2 ${isLoading ? "opacity-70 cursor-not-allowed" : ""
+                        }`}
                 >
-                    Đăng Nhập
+                    {isLoading ? (
+                        <>
+                            <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                            Đang xử lý...
+                        </>
+                    ) : (
+                        "Đăng Nhập"
+                    )}
                 </button>
             </form>
         </div>
