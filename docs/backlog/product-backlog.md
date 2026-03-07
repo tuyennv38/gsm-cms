@@ -31,3 +31,28 @@
 - **Priority:** High
 - **Story Points:** 2
 - **Status:** ✅ Done (Sprint 1)
+
+### PBI: Dashboard Layout & Navigation
+- **ID:** `feature:dashboard-navigation-0003`
+- **Implements:** `prd:dashboard-0003`
+- **User Story:** Với vai trò là người quản trị, tôi muốn thấy khung Dashboard sau khi đăng nhập để bắt đầu thao tác quản lý.
+- **Acceptance Criteria:**
+  - [ ] AC1: Logo dự án hiển thị ở góc trên.
+  - [ ] AC2: Sidebar hoặc Navbar chứa menu "Tổng quan", "Báo cáo".
+  - [ ] AC3: Chuyển hướng thành công từ `/login` sang `/dashboard` sau khi click Đăng nhập (Mockup).
+- **Priority:** High
+- **Story Points:** 3
+- **Status:** 📋 Backlog
+
+### PBI: Revenue Chart (7 Days)
+- **ID:** `feature:revenue-chart-0004`
+- **Implements:** `prd:dashboard-0003`
+- **User Story:** Với vai trò là người quản trị, tôi muốn xem biểu đồ doanh thu 7 ngày qua để nắm được xu hướng bán hàng.
+- **Acceptance Criteria:**
+  - [ ] AC1: Có biểu đồ đường hiển thị giá trị doanh thu.
+  - [ ] AC2: Hiển thị đúng 7 ngày (từ hiện tại lùi lại).
+  - [ ] AC3: Có Tooltip khi hover vào các điểm trên biểu đồ.
+  - [ ] AC4: Giao diện đồng bộ với phong cách Light mode.
+- **Priority:** Medium
+- **Story Points:** 5
+- **Status:** 📋 Backlog
