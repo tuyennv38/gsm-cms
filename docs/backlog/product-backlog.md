@@ -67,7 +67,7 @@
   - [ ] AC3: Dropdown có hiển thị thông tin, nút Đổi mật khẩu và nút Đăng xuất.
 - **Priority:** Medium
 - **Story Points:** 2
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done (Sprint 3)
 
 ### PBI: Change Password Page
 - **ID:** `feature:change-password-0006`
@@ -79,4 +79,4 @@
   - [ ] AC3: Xử lý logic giả lập (mock): mật khẩu đúng là "123456", hiện thông báo thành công sau đó redirect về Dashboard.
 - **Priority:** High
 - **Story Points:** 3
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done (Sprint 3)
