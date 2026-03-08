@@ -54,10 +54,14 @@ export default function ProfileMenu() {
                     </div>
 
                     <div className="px-2">
-                        <button className="w-full flex items-center gap-3 px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors cursor-default">
+                        <Link 
+                            href="/dashboard/profile"
+                            className="w-full flex items-center gap-3 px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors cursor-pointer"
+                            onClick={() => setIsOpen(false)}
+                        >
                             <User size={16} />
                             Thông tin tài khoản
-                        </button>
+                        </Link>
                         
                         <Link 
                             href="/dashboard/change-password"
