@@ -80,3 +80,16 @@
 - **Priority:** High
 - **Story Points:** 3
 - **Status:** ✅ Done (Sprint 3)
+
+### PBI: Profile Page
+- **ID:** `feature:user-profile-page-0007`
+- **Implements:** `prd:user-profile-0005`
+- **User Story:** Với vai trò là người dùng, tôi muốn xem trang thông tin tài khoản chi tiết của mình để kiểm tra các thông tin hiển thị như tên, email và trạng thái.
+- **Acceptance Criteria:**
+  - [ ] AC1: Có route `/dashboard/profile` hiển thị giao diện thông tin chi tiết.
+  - [ ] AC2: Hiển thị Avatar/Icon người quản trị viên.
+  - [ ] AC3: Hiện tên, email, vai trò (mock text).
+  - [ ] AC4: Nút chỉnh sửa hiển thị thông báo alert.
+- **Priority:** Medium
+- **Story Points:** 2
+- **Status:** 📋 Backlog

@@ -14,6 +14,7 @@ src/
 │   ├── login/                # Login page mockup
 │   ├── dashboard/            # Nhánh chính sau đăng nhập
 │   │   ├── change-password/  # Trang đổi mật khẩu
+│   │   ├── profile/          # Trang chi tiết thông tin tài khoản
 │   │   └── page.tsx          # Trang chủ Dashboard (Mock Chart)
 │   └── layout.tsx            # Root layout chung cấu hình Tailwind CSS
 ├── components/               # Cấu trúc Component dùng lại
@@ -45,6 +46,9 @@ graph TD
 
   D --> CP[ChangePasswordPage]
   CP --> CPF[ChangePasswordForm]
+
+  D --> PP[ProfilePage]
+  PP --> PUI[ProfileUIDisplay]
 ```
 
 ### 2.3 Interface/Contract
@@ -54,14 +58,16 @@ graph TD
 | `ProfileMenu` | `user` data hiển thị thông tin | `lucide-react` |
 | `ChangePasswordForm` | `onSubmit` logic đổi MK giả lập | Validate local hook |
 | `RevenueChart` | `data` đồ thị doanh thu mock | `Recharts` |
+| `ProfilePage` | Lấy dữ liệu user mock từ lib | layout components chung |
 
 ## 3. Data Flow
 Mô tả luồng dữ liệu (App Mockup flow):
 1. User nhập liệu `Email` và `Password` trên `LoginForm`. Validate -> ấn Submit -> Fake Redirect qua `/dashboard`.
 2. Truy cập `/dashboard` -> UI render `Navbar` (có chứa `ProfileMenu`), `Sidebar`, và tải mock data doanh thu từ `lib/mock-data.ts`.
 3. Biểu đồ `RevenueChart` đọc data và hiển thị biểu đồ 7 ngày từ `Recharts`.
-4. User click `ProfileMenu` -> click "Đổi mật khẩu" chuyển sang route `/dashboard/change-password`.
+4. User click `ProfileMenu` -> click "Đổi mật khẩu" chuyển sang route `/dashboard/change-password`. Tương tự, nếu bấm "Thông tin tài khoản", render `/dashboard/profile`.
 5. Trong form đổi mật khẩu, validate cục bộ hiện lên tại chỗ nếu lỗi hoặc đúng -> hiện thông báo và fake redirect.
+6. Trang Profile load thông tin mock và biểu diễn UI, các nút click như "Chỉnh sửa" được mock hàm alert.
 
 ## 4. Quy ước kỹ thuật
 - **Coding Standards:** Functional components, Custom hooks, chia nhỏ logic.
