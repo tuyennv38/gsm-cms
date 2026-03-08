@@ -50,7 +50,9 @@
 
 ## Commit Sprint Plan (BẮT BUỘC)
 
-> ⚠️ **Sau khi tạo xong Sprint Plan, BẮT BUỘC commit ngay trước khi bắt đầu Implementation.** Điều này giúp lưu lại bản plan gốc để so sánh sau Sprint.
+> 🛑 **USER APPROVAL REQUIRED:** Trước khi thực hiện lệnh commit dưới đây, Agent BẮT BUỘC phải dừng lại, trình bày nội dung Sprint Plan và yêu cầu USER duyệt (approve). CHỈ KHI USER đồng ý thì mới tiến hành commit.
+
+> ⚠️ **Sau khi được duyệt, BẮT BUỘC commit ngay trước khi bắt đầu Implementation.** Điều này giúp lưu lại bản plan gốc để so sánh sau Sprint.
 
 ```bash
 # Stage Sprint Plan

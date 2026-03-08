@@ -206,7 +206,9 @@ Architect thực hiện các công việc sau:
 > **Input:** Tất cả tài liệu đã tạo trong Giai đoạn 1
 > **Output:** Git commit chứa toàn bộ tài liệu Pre-Sprint
 
-> ⚠️ **CRITICAL: Sau khi hoàn thành Giai đoạn 1, BẮT BUỘC commit toàn bộ tài liệu trước khi chuyển sang Giai đoạn 2.** Điều này đảm bảo tài liệu được version control và có thể truy vết lịch sử thay đổi.
+> 🛑 **USER APPROVAL REQUIRED:** Trước khi thực hiện lệnh commit dưới đây, Agent BẮT BUỘC phải dừng lại, báo cáo kết quả Giai đoạn 1 (hiển thị tóm tắt nội dung Backlog, ADR, System Design) và yêu cầu USER duyệt (approve). CHỈ KHI USER đồng ý thì mới tiến hành commit.
+
+> ⚠️ **CRITICAL: Sau khi được duyệt, BẮT BUỘC commit toàn bộ tài liệu trước khi chuyển sang Giai đoạn 2.** Điều này đảm bảo tài liệu được version control và có thể truy vết lịch sử thay đổi.
 
 ### Các file cần commit:
 - `docs/backlog/product-backlog.md`
