@@ -116,18 +116,21 @@ commit   → Implements: task:*
 | `task:build-filter-ui-0001` | `feature:search-filter-0001` | Dựng UI bộ lọc |
 ```
 
-### Bước 5: Tạo bảng tổng hợp (Phụ lục)
+### Bước 5: Tạo bảng tổng hợp (Phụ lục) dạng CLICKABLE
 
-Luôn thêm **Phụ lục: Bảng tổng hợp ID & Truy vết** ở cuối tài liệu. Bảng này chứa **TẤT CẢ** ID trong tài liệu:
+Luôn thêm **Phụ lục: Bảng tổng hợp ID & Truy vết** ở cuối tài liệu. Bảng này chứa **TẤT CẢ** ID trong tài liệu.
+> 💡 **QUAN TRỌNG:** Ở bảng này, các ID trong cột "ID" và các tham chiếu ở cột "Implements" (nếu có ở cùng file) **PHẢI** được định dạng thành **Markdown Anchor Link**. 
+> Điều này giúp người đọc bấm vào ID là tự động cuộn (jump) về đúng đề mục mô tả chi tiết của ID đó.
+> Cú pháp Markdown: `[`<ID>`]({{anchor-link}})` — Ví dụ: `[`prd:login-0001`](#1-tổng-quan)`
 
 ```markdown
 ## Phụ lục: Bảng tổng hợp ID & Truy vết
 
 | ID | Loại | Implements | Mô tả ngắn |
 |----|------|------------|-------------|
-| `prd:...-0001` | prd | — (gốc) | ... |
-| `feature:...-0001` | feature | `prd:...-0001` | ... |
-| `task:...-0001` | task | `feature:...-0001` | ... |
+| [`prd:...-0001`](#1-tổng-quan) | prd | — (gốc) | ... |
+| [`feature:...-0001`](#2-tính-năng) | feature | [`prd:...-0001`](#1-tổng-quan) | ... |
+| [`task:...-0001`](#5-tasks) | task | [`feature:...-0001`](#2-tính-năng) | ... |
 ```
 
 ### Bước 6: Tự kiểm tra (Self-QA Checklist)
@@ -173,13 +176,13 @@ Xây dựng trang danh sách sản phẩm...
 ## Phụ lục: Bảng tổng hợp ID & Truy vết
 | ID | Loại | Implements | Mô tả |
 |----|------|------------|-------|
-| `prd:product-listing-0001` | prd | — (gốc) | Trang danh sách sản phẩm |
-| `prd:tech-stack-0002` | prd | — (gốc) | Tech stack |
-| `feature:product-grid-0001` | feature | `prd:product-listing-0001` | Lưới sản phẩm |
-| `feature:search-filter-0002` | feature | `prd:product-listing-0001` | Tìm kiếm & lọc |
-| `task:setup-project-0001` | task | `prd:tech-stack-0002` | Khởi tạo dự án |
-| `task:build-grid-ui-0002` | task | `feature:product-grid-0001` | Dựng UI |
-| `task:add-search-0003` | task | `feature:search-filter-0002` | Thêm bộ lọc |
+| [`prd:product-listing-0001`](#1-tổng-quan) | prd | — (gốc) | Trang danh sách sản phẩm |
+| [`prd:tech-stack-0002`](#3-tech-stack) | prd | — (gốc) | Tech stack |
+| [`feature:product-grid-0001`](#2-giao-diện) | feature | [`prd:product-listing-0001`](#1-tổng-quan) | Lưới sản phẩm |
+| [`feature:search-filter-0002`](#4-tìm-kiếm--lọc) | feature | [`prd:product-listing-0001`](#1-tổng-quan) | Tìm kiếm & lọc |
+| [`task:setup-project-0001`](#5-tasks) | task | [`prd:tech-stack-0002`](#3-tech-stack) | Khởi tạo dự án |
+| [`task:build-grid-ui-0002`](#5-tasks) | task | [`feature:product-grid-0001`](#2-giao-diện) | Dựng UI |
+| [`task:add-search-0003`](#5-tasks) | task | [`feature:search-filter-0002`](#4-tìm-kiếm--lọc) | Thêm bộ lọc |
 ```
 
 ## 8. Anti-Patterns (KHÔNG làm)
