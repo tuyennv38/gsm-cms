@@ -5,7 +5,8 @@
 "use client";
 
 import React from "react";
-import { Bell, Search, UserCircle } from "lucide-react";
+import { Bell, Search } from "lucide-react";
+import ProfileMenu from "./ProfileMenu";
 
 export default function DashboardHeader() {
     return (
@@ -27,15 +28,7 @@ export default function DashboardHeader() {
                     <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
                 </button>
 
-                <div className="flex items-center gap-3 pl-6 border-l border-gray-200 group cursor-pointer">
-                    <div className="text-right">
-                        <p className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Admin User</p>
-                        <p className="text-xs text-gray-500">Quản trị viên</p>
-                    </div>
-                    <div className="bg-blue-100 text-blue-600 p-2 rounded-full">
-                        <UserCircle size={24} />
-                    </div>
-                </div>
+                <ProfileMenu />
             </div>
         </header>
     );
