@@ -81,6 +81,22 @@ Hệ thống cần cung cấp một trang Dashboard sau khi người dùng đăn
   - Nếu sai mật khẩu hiện tại: Báo lỗi "Mật khẩu hiện tại không đúng".
 - **Ngôn ngữ hiển thị**: Tiếng Việt.
 
+### 5.3 Trang Thông Tin Tài Khoản (Profile Page)
+`feature:user-profile-page-0007`
+> Implements: `prd:user-profile-0005`
+
+- **Route**: `/dashboard/profile`
+- **Layout**: Sử dụng chung layout Dashboard (Sidebar/Navbar).
+- **Giao diện**:
+  - Tiêu đề: "Thông tin tài khoản".
+  - Hiển thị Avatar/Icon người dùng kích thước lớn.
+  - Hiển thị các trường thông tin (giả lập):
+    - Tên hiển thị: Admin User
+    - Email: admin@example.com
+    - Vai trò: Quản trị viên
+    - Tình trạng: Đang hoạt động
+  - Chức năng: Nút "Chỉnh sửa" (hiện tại bấm vào chỉ Alert: "Chức năng đang phát triển").
+- **Tương tác**: Từ dropdown menu ở Header, bấm "Thông tin tài khoản" hệ thống sẽ chuyển hướng hoặc render route tới trang này.
 ---
 
 ## 6. Các bước triển khai tiếp theo (Tasks)
@@ -95,6 +111,7 @@ Hệ thống cần cung cấp một trang Dashboard sau khi người dùng đăn
 | 6 | `task:build-profile-menu-0010` | `feature:profile-menu-0005` | Dựng UI dropdown Profile trên Navbar Dashboard (avatar, tên, menu). | ⬜ Chưa làm |
 | 7 | `task:build-change-password-ui-0011` | `feature:change-password-0006` | Dựng layout trang đổi mật khẩu với form (mật khẩu cũ, mới, xác nhận). | ⬜ Chưa làm |
 | 8 | `task:add-change-password-validation-0012` | `feature:change-password-0006` | Thêm validation form đổi mật khẩu và xử lý mock logic. | ⬜ Chưa làm |
+| 9 | `task:build-profile-page-0013` | `feature:user-profile-page-0007` | Dựng UI hiển thị chi tiết thông tin Profile. | ⬜ Chưa làm |
 
 ---
 
@@ -117,3 +134,5 @@ Hệ thống cần cung cấp một trang Dashboard sau khi người dùng đăn
 | `task:build-profile-menu-0010` | task | `feature:profile-menu-0005` | Dựng UI dropdown Profile |
 | `task:build-change-password-ui-0011` | task | `feature:change-password-0006` | Dựng form đổi mật khẩu |
 | `task:add-change-password-validation-0012` | task | `feature:change-password-0006` | Validation + mock logic đổi mật khẩu |
+| `feature:user-profile-page-0007` | feature | `prd:user-profile-0005` | Trang hiển thị thông tin chi tiết tài khoản |
+| `task:build-profile-page-0013` | task | `feature:user-profile-page-0007` | Dựng layout trang profile |
