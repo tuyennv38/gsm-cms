@@ -26,5 +26,20 @@ export const generateMockRevenueData = (): RevenueData[] => {
     });
   }
 
+
   return data;
+};
+
+export interface MockUser {
+  name: string;
+  email: string;
+  role: string;
+  status: string;
+}
+
+export const mockUser: MockUser = {
+  name: "Admin User",
+  email: "admin@example.com",
+  role: "Quản trị viên",
+  status: "Đang hoạt động"
 };

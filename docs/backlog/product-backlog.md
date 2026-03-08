@@ -92,4 +92,4 @@
   - [ ] AC4: Nút chỉnh sửa hiển thị thông báo alert.
 - **Priority:** Medium
 - **Story Points:** 2
-- **Status:** 📋 Backlog
+- **Status:** ✅ Done (Sprint 4)
