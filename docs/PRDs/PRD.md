@@ -53,10 +53,10 @@ Cần áp dụng các kiểm tra lỗi cơ bản cho form đăng nhập. Nếu n
 
 | # | ID | Implements | Bước | Trạng thái |
 |---|----|------------|------|------------|
-| 1 | `task:setup-project-0001` | `prd:tech-stack-0002` | Khởi tạo dự án Next.js + Tailwind CSS, dọn dẹp file cũ. | ⬜ Chưa làm |
-| 2 | `task:build-login-ui-0002` | `feature:login-form-0001` | Dựng layout và form đăng nhập (input, button, error message). | ⬜ Chưa làm |
-| 3 | `task:add-validation-0003` | `feature:form-validation-0002` | Thêm validation cho form và hiển thị lỗi tiếng Việt. | ⬜ Chưa làm |
-| 4 | `task:test-responsive-0004` | `feature:login-form-0001` | Kiểm tra giao diện responsive trên các thiết bị. | ⬜ Chưa làm |
+| 1 | [`task:setup-project-0001`](#5-các-bước-triển-khai-tiếp-theo) | [`prd:tech-stack-0002`](#3-yêu-cầu-kỹ-thuật) | Khởi tạo dự án Next.js + Tailwind CSS, dọn dẹp file cũ. | ⬜ Chưa làm |
+| 2 | [`task:build-login-ui-0002`](#5-các-bước-triển-khai-tiếp-theo) | [`feature:login-form-0001`](#2-giao-diện-người-dùng-ui) | Dựng layout và form đăng nhập (input, button, error message). | ⬜ Chưa làm |
+| 3 | [`task:add-validation-0003`](#5-các-bước-triển-khai-tiếp-theo) | [`feature:form-validation-0002`](#4-validations-kiểm-tra-dữ-liệu) | Thêm validation cho form và hiển thị lỗi tiếng Việt. | ⬜ Chưa làm |
+| 4 | [`task:test-responsive-0004`](#5-các-bước-triển-khai-tiếp-theo) | [`feature:login-form-0001`](#2-giao-diện-người-dùng-ui) | Kiểm tra giao diện responsive trên các thiết bị. | ⬜ Chưa làm |
 
 ---
 
@@ -64,11 +64,11 @@ Cần áp dụng các kiểm tra lỗi cơ bản cho form đăng nhập. Nếu n
 
 | ID | Loại | Implements | Mô tả ngắn |
 |----|------|------------|-------------|
-| `prd:login-page-0001` | prd | — (gốc) | Yêu cầu gốc: xây trang đăng nhập |
-| `prd:tech-stack-0002` | prd | — (gốc) | Yêu cầu kỹ thuật: Next.js + Tailwind CSS + Light mode |
-| `feature:login-form-0001` | feature | `prd:login-page-0001` | Form đăng nhập (email, password, nút submit) |
-| `feature:form-validation-0002` | feature | `prd:login-page-0001` | Validation form: kiểm tra dữ liệu + hiển thị lỗi tiếng Việt |
-| `task:setup-project-0001` | task | `prd:tech-stack-0002` | Khởi tạo dự án + dọn file cũ |
-| `task:build-login-ui-0002` | task | `feature:login-form-0001` | Dựng giao diện login |
-| `task:add-validation-0003` | task | `feature:form-validation-0002` | Thêm validation form |
-| `task:test-responsive-0004` | task | `feature:login-form-0001` | Kiểm tra responsive |
+| [`prd:login-page-0001`](#1-tổng-quan) | prd | — (gốc) | Yêu cầu gốc: xây trang đăng nhập |
+| [`prd:tech-stack-0002`](#3-yêu-cầu-kỹ-thuật) | prd | — (gốc) | Yêu cầu kỹ thuật: Next.js + Tailwind CSS + Light mode |
+| [`feature:login-form-0001`](#2-giao-diện-người-dùng-ui) | feature | [`prd:login-page-0001`](#1-tổng-quan) | Form đăng nhập (email, password, nút submit) |
+| [`feature:form-validation-0002`](#4-validations-kiểm-tra-dữ-liệu) | feature | [`prd:login-page-0001`](#1-tổng-quan) | Validation form: kiểm tra dữ liệu + hiển thị lỗi tiếng Việt |
+| [`task:setup-project-0001`](#5-các-bước-triển-khai-tiếp-theo) | task | [`prd:tech-stack-0002`](#3-yêu-cầu-kỹ-thuật) | Khởi tạo dự án + dọn file cũ |
+| [`task:build-login-ui-0002`](#5-các-bước-triển-khai-tiếp-theo) | task | [`feature:login-form-0001`](#2-giao-diện-người-dùng-ui) | Dựng giao diện login |
+| [`task:add-validation-0003`](#5-các-bước-triển-khai-tiếp-theo) | task | [`feature:form-validation-0002`](#4-validations-kiểm-tra-dữ-liệu) | Thêm validation form |
+| [`task:test-responsive-0004`](#5-các-bước-triển-khai-tiếp-theo) | task | [`feature:login-form-0001`](#2-giao-diện-người-dùng-ui) | Kiểm tra responsive |

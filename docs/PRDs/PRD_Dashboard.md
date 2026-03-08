@@ -103,15 +103,15 @@ Hệ thống cần cung cấp một trang Dashboard sau khi người dùng đăn
 
 | # | Task ID | Implements | Bước | Trạng thái |
 |---|----|------------|------|------------|
-| 1 | `task:add-chart-lib-0005` | `prd:dashboard-tech-0004` | Cài đặt và cấu hình Recharts hoặc thư viện liên quan. | ⬜ Chưa làm |
-| 2 | `task:setup-dashboard-layout-0006` | `feature:dashboard-navigation-0003` | Dựng khung layout cho Dashboard (Sidebar/Navbar). | ⬜ Chưa làm |
-| 3 | `task:mock-revenue-data-0007` | `feature:revenue-chart-0004` | Viết logic sinh data doanh thu 7 ngày gần nhất. | ⬜ Chưa làm |
-| 4 | `task:build-revenue-chart-0008` | `feature:revenue-chart-0004` | Tích hợp biểu đồ Line Chart vào trang `/dashboard`. | ⬜ Chưa làm |
-| 5 | `task:handle-login-redirect-0009` | `feature:dashboard-navigation-0003` | Cập nhật logic Form Login để chuyển hướng sang Dashboard. | ⬜ Chưa làm |
-| 6 | `task:build-profile-menu-0010` | `feature:profile-menu-0005` | Dựng UI dropdown Profile trên Navbar Dashboard (avatar, tên, menu). | ⬜ Chưa làm |
-| 7 | `task:build-change-password-ui-0011` | `feature:change-password-0006` | Dựng layout trang đổi mật khẩu với form (mật khẩu cũ, mới, xác nhận). | ⬜ Chưa làm |
-| 8 | `task:add-change-password-validation-0012` | `feature:change-password-0006` | Thêm validation form đổi mật khẩu và xử lý mock logic. | ⬜ Chưa làm |
-| 9 | `task:build-profile-page-0013` | `feature:user-profile-page-0007` | Dựng UI hiển thị chi tiết thông tin Profile. | ⬜ Chưa làm |
+| 1 | [`task:add-chart-lib-0005`](#6-các-bước-triển-khai-tiếp-theo-tasks) | [`prd:dashboard-tech-0004`](#4-yêu-cầu-kỹ-thuật) | Cài đặt và cấu hình Recharts hoặc thư viện liên quan. | ⬜ Chưa làm |
+| 2 | [`task:setup-dashboard-layout-0006`](#6-các-bước-triển-khai-tiếp-theo-tasks) | [`feature:dashboard-navigation-0003`](#2-các-luồng-người-dùng-user-flows) | Dựng khung layout cho Dashboard (Sidebar/Navbar). | ⬜ Chưa làm |
+| 3 | [`task:mock-revenue-data-0007`](#6-các-bước-triển-khai-tiếp-theo-tasks) | [`feature:revenue-chart-0004`](#3-biểu-đồ-doanh-thu-revenue-chart) | Viết logic sinh data doanh thu 7 ngày gần nhất. | ⬜ Chưa làm |
+| 4 | [`task:build-revenue-chart-0008`](#6-các-bước-triển-khai-tiếp-theo-tasks) | [`feature:revenue-chart-0004`](#3-biểu-đồ-doanh-thu-revenue-chart) | Tích hợp biểu đồ Line Chart vào trang `/dashboard`. | ⬜ Chưa làm |
+| 5 | [`task:handle-login-redirect-0009`](#6-các-bước-triển-khai-tiếp-theo-tasks) | [`feature:dashboard-navigation-0003`](#2-các-luồng-người-dùng-user-flows) | Cập nhật logic Form Login để chuyển hướng sang Dashboard. | ⬜ Chưa làm |
+| 6 | [`task:build-profile-menu-0010`](#6-các-bước-triển-khai-tiếp-theo-tasks) | [`feature:profile-menu-0005`](#51-menu-profile) | Dựng UI dropdown Profile trên Navbar Dashboard (avatar, tên, menu). | ⬜ Chưa làm |
+| 7 | [`task:build-change-password-ui-0011`](#6-các-bước-triển-khai-tiếp-theo-tasks) | [`feature:change-password-0006`](#52-trang-đổi-mật-khẩu) | Dựng layout trang đổi mật khẩu với form (mật khẩu cũ, mới, xác nhận). | ⬜ Chưa làm |
+| 8 | [`task:add-change-password-validation-0012`](#6-các-bước-triển-khai-tiếp-theo-tasks) | [`feature:change-password-0006`](#52-trang-đổi-mật-khẩu) | Thêm validation form đổi mật khẩu và xử lý mock logic. | ⬜ Chưa làm |
+| 9 | [`task:build-profile-page-0013`](#6-các-bước-triển-khai-tiếp-theo-tasks) | [`feature:user-profile-page-0007`](#53-trang-thông-tin-tài-khoản-profile-page) | Dựng UI hiển thị chi tiết thông tin Profile. | ⬜ Chưa làm |
 
 ---
 
