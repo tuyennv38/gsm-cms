@@ -1,4 +1,4 @@
-# Product Requirements Document (PRD): Dashboard & Biểu đồ Doanh thu (Sales Dashboard)
+# Product Requirements Document (PRD): Dashboard, Biểu đồ Doanh thu & Quản lý tài khoản
 
 `prd:dashboard-0003`
 > Implements: `prd:login-page-0001` (Tiếp nối sau đăng nhập)
@@ -44,7 +44,46 @@ Hệ thống cần cung cấp một trang Dashboard sau khi người dùng đăn
 
 ---
 
-## 5. Các bước triển khai tiếp theo (Tasks)
+## 5. Profile & Đổi mật khẩu (Change Password)
+`prd:user-profile-0005`
+> Implements: `prd:dashboard-0003`
+
+### 5.1 Menu Profile
+`feature:profile-menu-0005`
+> Implements: `prd:user-profile-0005`
+
+- **Vị trí**: Trên thanh điều hướng (Navbar/Header) của Dashboard, góc phải.
+- **Hiển thị**: Avatar hoặc icon user + tên người dùng (mock data).
+- **Dropdown menu**: Khi bấm vào sẽ hiện dropdown với các mục:
+  - **Thông tin tài khoản**: Hiển thị email, tên (thông tin giả lập).
+  - **Đổi mật khẩu**: Điều hướng tới trang `/dashboard/change-password`.
+  - **Đăng xuất**: Quay về trang `/login`.
+
+### 5.2 Trang Đổi mật khẩu
+`feature:change-password-0006`
+> Implements: `prd:user-profile-0005`
+
+- **Route**: `/dashboard/change-password`
+- **Layout**: Sử dụng chung layout Dashboard (Sidebar/Navbar), nội dung chính là form đổi mật khẩu nằm trong một card.
+- **Form bao gồm**:
+  - **Mật khẩu hiện tại**: Input type password, bắt buộc.
+  - **Mật khẩu mới**: Input type password, bắt buộc.
+  - **Xác nhận mật khẩu mới**: Input type password, bắt buộc.
+  - **Nút "Đổi mật khẩu"**: Submit form.
+  - **Nút "Hủy"**: Quay lại trang Dashboard.
+- **Validation**:
+  - Mật khẩu hiện tại: Không được để trống (báo lỗi: "Vui lòng nhập mật khẩu hiện tại").
+  - Mật khẩu mới: Không được để trống ("Vui lòng nhập mật khẩu mới"), tối thiểu 6 ký tự ("Mật khẩu mới phải có ít nhất 6 ký tự"), không được trùng mật khẩu hiện tại ("Mật khẩu mới không được trùng mật khẩu hiện tại").
+  - Xác nhận mật khẩu: Phải khớp với mật khẩu mới ("Xác nhận mật khẩu không khớp").
+- **Xử lý giả lập (Mock)**:
+  - Mật khẩu hiện tại giả lập: `"123456"` (giống mật khẩu đăng nhập mock).
+  - Nếu đúng: Hiển thị thông báo thành công ("Đổi mật khẩu thành công!") và chuyển về `/dashboard` sau 2 giây.
+  - Nếu sai mật khẩu hiện tại: Báo lỗi "Mật khẩu hiện tại không đúng".
+- **Ngôn ngữ hiển thị**: Tiếng Việt.
+
+---
+
+## 6. Các bước triển khai tiếp theo (Tasks)
 
 | # | Task ID | Implements | Bước | Trạng thái |
 |---|----|------------|------|------------|
@@ -53,6 +92,9 @@ Hệ thống cần cung cấp một trang Dashboard sau khi người dùng đăn
 | 3 | `task:mock-revenue-data-0007` | `feature:revenue-chart-0004` | Viết logic sinh data doanh thu 7 ngày gần nhất. | ⬜ Chưa làm |
 | 4 | `task:build-revenue-chart-0008` | `feature:revenue-chart-0004` | Tích hợp biểu đồ Line Chart vào trang `/dashboard`. | ⬜ Chưa làm |
 | 5 | `task:handle-login-redirect-0009` | `feature:dashboard-navigation-0003` | Cập nhật logic Form Login để chuyển hướng sang Dashboard. | ⬜ Chưa làm |
+| 6 | `task:build-profile-menu-0010` | `feature:profile-menu-0005` | Dựng UI dropdown Profile trên Navbar Dashboard (avatar, tên, menu). | ⬜ Chưa làm |
+| 7 | `task:build-change-password-ui-0011` | `feature:change-password-0006` | Dựng layout trang đổi mật khẩu với form (mật khẩu cũ, mới, xác nhận). | ⬜ Chưa làm |
+| 8 | `task:add-change-password-validation-0012` | `feature:change-password-0006` | Thêm validation form đổi mật khẩu và xử lý mock logic. | ⬜ Chưa làm |
 
 ---
 
@@ -62,10 +104,16 @@ Hệ thống cần cung cấp một trang Dashboard sau khi người dùng đăn
 |----|------|------------|-------------|
 | `prd:dashboard-0003` | prd | `prd:login-page-0001` | Yêu cầu tổng quan về Dashboard |
 | `prd:dashboard-tech-0004` | prd | `prd:tech-stack-0002` | Tech stack cho Dashboard (Recharts) |
+| `prd:user-profile-0005` | prd | `prd:dashboard-0003` | Yêu cầu Profile & Đổi mật khẩu |
 | `feature:dashboard-navigation-0003` | feature | `prd:dashboard-0003` | Luồng chuyển hướng và Menu chính |
 | `feature:revenue-chart-0004` | feature | `prd:dashboard-0003` | Biểu đồ đường doanh thu 7 ngày |
+| `feature:profile-menu-0005` | feature | `prd:user-profile-0005` | Dropdown menu Profile trên Navbar |
+| `feature:change-password-0006` | feature | `prd:user-profile-0005` | Trang đổi mật khẩu với form và validation |
 | `task:add-chart-lib-0005` | task | `prd:dashboard-tech-0004` | Cài thư viện biểu đồ |
 | `task:setup-dashboard-layout-0006` | task | `feature:dashboard-navigation-0003` | Dựng UI khung Dashboard |
 | `task:mock-revenue-data-0007` | task | `feature:revenue-chart-0004` | Logic dữ liệu giả lập |
 | `task:build-revenue-chart-0008` | task | `feature:revenue-chart-0004` | Triển khai biểu đồ đường |
 | `task:handle-login-redirect-0009` | task | `feature:dashboard-navigation-0003` | Logic redirect sau login |
+| `task:build-profile-menu-0010` | task | `feature:profile-menu-0005` | Dựng UI dropdown Profile |
+| `task:build-change-password-ui-0011` | task | `feature:change-password-0006` | Dựng form đổi mật khẩu |
+| `task:add-change-password-validation-0012` | task | `feature:change-password-0006` | Validation + mock logic đổi mật khẩu |

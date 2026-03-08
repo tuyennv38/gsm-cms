@@ -56,3 +56,27 @@
 - **Priority:** Medium
 - **Story Points:** 5
 - **Status:** 📋 Backlog
+
+### PBI: Profile Menu
+- **ID:** `feature:profile-menu-0005`
+- **Implements:** `prd:user-profile-0005`
+- **User Story:** Với vai trò là người dùng, tôi muốn bấm vào avatar trên navbar để mở menu chứa thông tin tài khoản, nút đổi mật khẩu và nút đăng xuất.
+- **Acceptance Criteria:**
+  - [ ] AC1: Có avatar hoặc icon + tên giả lập trên Navbar.
+  - [ ] AC2: Click vào hiện dropdown.
+  - [ ] AC3: Dropdown có hiển thị thông tin, nút Đổi mật khẩu và nút Đăng xuất.
+- **Priority:** Medium
+- **Story Points:** 2
+- **Status:** 📋 Backlog
+
+### PBI: Change Password Page
+- **ID:** `feature:change-password-0006`
+- **Implements:** `prd:user-profile-0005`
+- **User Story:** Với vai trò là người dùng, tôi muốn xem trang form đổi mật khẩu và nhận được thông báo sau khi điền đúng thông tin giả lập.
+- **Acceptance Criteria:**
+  - [ ] AC1: Có form với 3 trường: mật khẩu hiện tại, mật khẩu mới, xác nhận mật khẩu mới.
+  - [ ] AC2: Validate các trường không trống, mật khẩu mới >= 6 ký tự, xác nhận khớp.
+  - [ ] AC3: Xử lý logic giả lập (mock): mật khẩu đúng là "123456", hiện thông báo thành công sau đó redirect về Dashboard.
+- **Priority:** High
+- **Story Points:** 3
+- **Status:** 📋 Backlog
