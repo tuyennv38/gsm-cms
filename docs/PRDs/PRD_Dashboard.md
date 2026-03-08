@@ -119,20 +119,20 @@ Hệ thống cần cung cấp một trang Dashboard sau khi người dùng đăn
 
 | ID | Loại | Implements | Mô tả ngắn |
 |----|------|------------|-------------|
-| `prd:dashboard-0003` | prd | `prd:login-page-0001` | Yêu cầu tổng quan về Dashboard |
-| `prd:dashboard-tech-0004` | prd | `prd:tech-stack-0002` | Tech stack cho Dashboard (Recharts) |
-| `prd:user-profile-0005` | prd | `prd:dashboard-0003` | Yêu cầu Profile & Đổi mật khẩu |
-| `feature:dashboard-navigation-0003` | feature | `prd:dashboard-0003` | Luồng chuyển hướng và Menu chính |
-| `feature:revenue-chart-0004` | feature | `prd:dashboard-0003` | Biểu đồ đường doanh thu 7 ngày |
-| `feature:profile-menu-0005` | feature | `prd:user-profile-0005` | Dropdown menu Profile trên Navbar |
-| `feature:change-password-0006` | feature | `prd:user-profile-0005` | Trang đổi mật khẩu với form và validation |
-| `task:add-chart-lib-0005` | task | `prd:dashboard-tech-0004` | Cài thư viện biểu đồ |
-| `task:setup-dashboard-layout-0006` | task | `feature:dashboard-navigation-0003` | Dựng UI khung Dashboard |
-| `task:mock-revenue-data-0007` | task | `feature:revenue-chart-0004` | Logic dữ liệu giả lập |
-| `task:build-revenue-chart-0008` | task | `feature:revenue-chart-0004` | Triển khai biểu đồ đường |
-| `task:handle-login-redirect-0009` | task | `feature:dashboard-navigation-0003` | Logic redirect sau login |
-| `task:build-profile-menu-0010` | task | `feature:profile-menu-0005` | Dựng UI dropdown Profile |
-| `task:build-change-password-ui-0011` | task | `feature:change-password-0006` | Dựng form đổi mật khẩu |
-| `task:add-change-password-validation-0012` | task | `feature:change-password-0006` | Validation + mock logic đổi mật khẩu |
-| `feature:user-profile-page-0007` | feature | `prd:user-profile-0005` | Trang hiển thị thông tin chi tiết tài khoản |
-| `task:build-profile-page-0013` | task | `feature:user-profile-page-0007` | Dựng layout trang profile |
+| [`prd:dashboard-0003`](#1-tổng-quan) | prd | [`prd:login-page-0001`](PRD.md) | Yêu cầu tổng quan về Dashboard |
+| [`prd:dashboard-tech-0004`](#4-yêu-cầu-kỹ-thuật) | prd | [`prd:tech-stack-0002`](PRD.md) | Tech stack cho Dashboard (Recharts) |
+| [`prd:user-profile-0005`](#5-profile--đổi-mật-khẩu-change-password) | prd | [`prd:dashboard-0003`](#1-tổng-quan) | Yêu cầu Profile & Đổi mật khẩu |
+| [`feature:dashboard-navigation-0003`](#2-các-luồng-người-dùng-user-flows) | feature | [`prd:dashboard-0003`](#1-tổng-quan) | Luồng chuyển hướng và Menu chính |
+| [`feature:revenue-chart-0004`](#3-biểu-đồ-doanh-thu-revenue-chart) | feature | [`prd:dashboard-0003`](#1-tổng-quan) | Biểu đồ đường doanh thu 7 ngày |
+| [`feature:profile-menu-0005`](#51-menu-profile) | feature | [`prd:user-profile-0005`](#5-profile--đổi-mật-khẩu-change-password) | Dropdown menu Profile trên Navbar |
+| [`feature:change-password-0006`](#52-trang-đổi-mật-khẩu) | feature | [`prd:user-profile-0005`](#5-profile--đổi-mật-khẩu-change-password) | Trang đổi mật khẩu với form và validation |
+| [`task:add-chart-lib-0005`](#6-các-bước-triển-khai-tiếp-theo-tasks) | task | [`prd:dashboard-tech-0004`](#4-yêu-cầu-kỹ-thuật) | Cài thư viện biểu đồ |
+| [`task:setup-dashboard-layout-0006`](#6-các-bước-triển-khai-tiếp-theo-tasks) | task | [`feature:dashboard-navigation-0003`](#2-các-luồng-người-dùng-user-flows) | Dựng UI khung Dashboard |
+| [`task:mock-revenue-data-0007`](#6-các-bước-triển-khai-tiếp-theo-tasks) | task | [`feature:revenue-chart-0004`](#3-biểu-đồ-doanh-thu-revenue-chart) | Logic dữ liệu giả lập |
+| [`task:build-revenue-chart-0008`](#6-các-bước-triển-khai-tiếp-theo-tasks) | task | [`feature:revenue-chart-0004`](#3-biểu-đồ-doanh-thu-revenue-chart) | Triển khai biểu đồ đường |
+| [`task:handle-login-redirect-0009`](#6-các-bước-triển-khai-tiếp-theo-tasks) | task | [`feature:dashboard-navigation-0003`](#2-các-luồng-người-dùng-user-flows) | Logic redirect sau login |
+| [`task:build-profile-menu-0010`](#6-các-bước-triển-khai-tiếp-theo-tasks) | task | [`feature:profile-menu-0005`](#51-menu-profile) | Dựng UI dropdown Profile |
+| [`task:build-change-password-ui-0011`](#6-các-bước-triển-khai-tiếp-theo-tasks) | task | [`feature:change-password-0006`](#52-trang-đổi-mật-khẩu) | Dựng form đổi mật khẩu |
+| [`task:add-change-password-validation-0012`](#6-các-bước-triển-khai-tiếp-theo-tasks) | task | [`feature:change-password-0006`](#52-trang-đổi-mật-khẩu) | Validation + mock logic đổi mật khẩu |
+| [`feature:user-profile-page-0007`](#53-trang-thông-tin-tài-khoản-profile-page) | feature | [`prd:user-profile-0005`](#5-profile--đổi-mật-khẩu-change-password) | Trang hiển thị thông tin chi tiết tài khoản |
+| [`task:build-profile-page-0013`](#6-các-bước-triển-khai-tiếp-theo-tasks) | task | [`feature:user-profile-page-0007`](#53-trang-thông-tin-tài-khoản-profile-page) | Dựng layout trang profile |
